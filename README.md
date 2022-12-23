@@ -3,7 +3,7 @@
 [![dependency status](https://deps.rs/repo/github/emilk/eframe_template/status.svg)](https://deps.rs/repo/github/emilk/eframe_template)
 [![Build Status](https://github.com/emilk/eframe_template/workflows/CI/badge.svg)](https://github.com/emilk/eframe_template/actions?workflow=CI)
 
-This is a project based on sqlite, diesel and egui with the goal of using it for do what is called Shadow Working
+This is a project based on sqlite, diesel and egui with the goal of using it for do what is called Shadow Working, its also related to the book of Carl Jung Answer to Job
 
 Thanks to egui you can compile your app natively or for the web, and share it using Github Pages, which we will left their intructions here.
 
