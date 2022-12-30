@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 pub const SHADOW_WORK: &[&str] = &[
     "1. If you met yourself for the first time, what would be your first impressions?",
     "2. How would your loved ones describe you? Are they accurate? Why or why not?",
