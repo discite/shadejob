@@ -1,3 +1,5 @@
+use crate::questions;
+
 /// We derive Deserialize/Serialize so we can persist app state on shutdown.
 #[derive(serde::Deserialize, serde::Serialize)]
 #[serde(default)] // if we add new fields, give them default values when deserializing old state
@@ -12,7 +14,7 @@ impl Default for TemplateApp {
     fn default() -> Self {
         Self {
             // Example stuff:
-            label: "Loading questions".to_owned(),
+            label: "Default text :D".to_owned(),
         }
     }
 }
@@ -74,6 +76,14 @@ impl eframe::App for TemplateApp {
         egui::CentralPanel::default().show(ctx, |ui| {
             // The central panel the region left after adding TopPanel's and SidePanel's
             ui.heading("Your list");
+            let shadow_questions = questions::basics::SHADOW_WORK;
+            shadow_questions.iter().enumerate().for_each(|(i, question)| {
+                ui.horizontal(|ui| {
+                    ui.label(i.to_string());
+                    ui.label(question.to_string());
+                    ui.text_edit_singleline(label);
+                });
+            });
         });
 
         if false {
